@@ -1,0 +1,246 @@
+pure_org_id	org_name
+c2d13eb3-0524-4255-8069-a8b89a813939	Gender And Violence Research
+96faa7d8-30d0-4d92-b19d-a8aac9545e50	Number Theory And Combinatorics
+79431fd4-8aa6-4e70-b5a6-54208087358b	Qet Labs
+36b467b9-f473-47a9-8911-82a8b9d5235c	School Of Physics
+53853989-55cf-4183-ac4c-03d0faa5c97a	Fundamental Bioscience
+c514f3c3-8fcf-4ab5-bcc1-e1a502e3e1e6	Centre For Research In Health And Social Care
+e2e31da6-2fe7-47e9-9511-c19fe258d522	The Bristol Research Initiative For The Dynamic Global Environment Bridge
+037b7e1b-fa35-49fa-9eff-64a151e5f2e0	Institute Of Clinical Neurosciences Icn
+46c454ff-2272-4182-bfd1-bd3e0da9806c	Animal Welfare And Behaviour
+0d51be15-c9e1-4551-831f-8f46b597f894	Department Of Economics
+839afdcb-f18c-4823-9480-0f35eb803064	The Bristol Centre For Nanoscience And Quantum Information
+f2646ac2-f28b-41e3-bc37-52b165813a9c	Dementia Research Groups
+5f73b603-c1ab-4ab8-aec3-30c80b5025d5	Centre For The Study Of Ethnicity And Citizenship
+db36be38-a5ea-4192-9259-26ad41f6230e	School Of Computer Science Electrical And Electronic Engineering And Engineering Maths
+4f19de17-4071-496d-8985-7ad485596405	Personal Finance Research Centre Pfrc
+8deb72a7-5249-499b-be06-4697459cd30c	Department Of Theatre
+29b44326-7593-412b-9168-3f3c74734add	School Of Cellular And Molecular Medicine
+72de7626-ed21-4548-af8b-780605afb389	Centre For Family Policy And Child Welfare
+84ad0d76-574f-494f-9462-d59f03e9058d	Analysis
+656c6edb-f521-4b6a-9eeb-38192242dffd	School Of Geographical Sciences
+ea820bdd-8d8e-4a8c-b23c-cc69c0344452	Theory And Algorithms
+159ebf1f-4fa2-41a0-a46d-a87abe6b83a8	Soft Matter Colloids And Materials
+eb970b11-fa07-4111-833a-e620929d60a9	School Of Humanities
+576c33c1-3f14-4788-9f10-15c32e9cb085	Historical And Cultural Research Group
+81b31b1e-ccaf-425c-a456-c01ee50673e2	Cancer
+a4f12a0b-d74b-43ab-b468-54138dd383b1	School Of Physiology Pharmacology  Neuroscience
+40265b54-ea4d-4940-8163-ea7d3f128a2a	Sociolegal Research
+587580ed-11e0-45cb-82e1-f546866e9f71	Ophthalmology
+1a01d9b4-d9c6-4b3d-bffb-a08f94162462	Centre For Assessment And Evaluation Research In Education
+9880f71f-8bf0-4365-850e-4c012a4c0590	Nihr Clahrc West
+dbe80fa2-daae-498b-b9ca-04ffe4920f5f	Centre For Applied Anatomy
+132c339e-5928-40e4-9e48-d3773e3b8121	Animal Behaviour And Sensory Biology
+de949949-2cb2-430b-883c-30103d8f86eb	School Of Chemistry
+3314c7d5-acea-46a2-bfa0-40b1d439f8b5	Centre For Buddhist Studies
+08529a4c-fa35-4b38-bb78-c249d8f12965	Petrology Formerly Beest
+9130eb07-2bac-4a13-8dbd-ebf901cd051e	Cryptography And Information Security
+67dc27e3-2eac-4ae5-8c96-56535a58fa15	School Of Economics Finance And Management
+97c2fd3f-abec-4864-b3fb-3032cbcd86cb	Department Of Accounting And Finance
+73439c27-1dfa-47b3-81a8-7f1605ea4cb8	Trustworthy Systems Laboratory
+ad88bf8a-9034-460e-9389-a62aca358661	Electrical Energy Management
+70a6782b-4c76-4f5f-a4de-d4facc129524	Insulinlike Growth Factors And Metabolic Endocrinology Group
+7894531a-1d46-4b62-bab5-fb69c6893728	Communication Systems And Networks
+5133fb7a-c2c5-4ec4-99f8-a9ef6a333f6d	Supramolecular And Mechanistic Chemistry
+db7749a6-9fec-42c5-9cb4-5dffb0f4d457	Mrc Integrative Epidemiology Unit
+ceae490a-5f74-43b5-b9af-2e5152f29ab0	International Law
+eba15f6a-09cc-446f-926e-130ec3c3eda2	Systems Centre
+934c06cb-e50e-4529-a7b0-331c1330d709	Centre For Market And Public Organisation
+e1648b94-43fb-4954-9273-e388b1e3b511	Set Theory And Logic
+7616b4e5-e57d-44f8-ab65-19793c85ef64	Solid Mechanics
+a96756e2-ea7b-43de-a8a9-ee61e91318e5	Department Of Russian
+205ba9f6-21e2-480f-ad7c-fa283e779172	Department Of Engineering Mathematics
+46ecf648-e093-4303-b134-d2ebc4822279	Department Of Philosophy
+a93d4f34-2845-46de-8df8-3cff7a7ab27c	Infection And Immunity
+dcf504e0-f6e4-4d1e-831e-c1fa0580c3dd	Labour Law And Corporate Governance
+d3595f02-fe9a-453f-a126-76f44d58eb5c	Centre For Innovation
+b43a2dfb-8b1a-49c3-a693-4e43086b0526	Pure Mathematics
+9ae52cfc-4d0a-4351-84cc-b7ee2485bf6d	Ultrasonics And Nondestructive Testing Undt
+cb1538b2-8b9a-458c-859d-7951812d4133	Plant And Agricultural Sciences
+9d3dea40-cc76-47fc-b5c0-5079014404e3	Academic Rheumatology
+d26f3a34-3b2e-4deb-8aeb-0046048c3bae	Probability
+d16be375-eeb0-429c-85cf-a32984d7b891	Transnational Modernisms Research Cluster
+0da0154c-88ef-419f-a712-adf6304a09ba	Developmental Group
+61678335-767d-4361-806a-93026092f416	Department Of Management
+ef6cdda6-f522-4177-ae7e-30dc55656d7c	Centre For The Study Of Colonial And Postcolonial Studies
+be3a488d-b910-40af-81c8-ae3c93fe85c3	Neurobiology Of Stress And Behaviour Research Group
+57df5f74-3285-4a5f-a6e8-e67d500a1cc3	Family Law And Child Law
+ff1c628f-33d9-41de-ac0a-bddb22c20257	Neuropsychology And Neuroimaging
+0abca080-2af2-4b55-83b2-51f62ef17ecc	School Of Education
+28eb9a76-dd90-4f17-950e-7bff668767d1	Sphere
+31f104ac-aa4f-4045-8f0d-b217953c9456	Mathematical Physics
+f349f849-3f19-46a4-b55b-fe6d17323f99	Department Of Anthropology And Archaeology
+9ae0977c-8312-4ce5-a9d7-363cf96541fa	Hydrology
+58e97cb0-72f5-49d7-81e5-d71425638456	Earthquake And Geotechnical Engineering
+842ddf8a-f870-4bdd-8180-eaafeafd247b	Inclusive And Special Education Network Isen
+2848baec-c239-48e3-9145-36eea9adeb16	Memory Group
+ef29bfc7-a381-4a0b-b170-26f268e672be	Department Of Aerospace Engineering
+981cb76f-6129-4ed5-9d31-fed36e6612ad	Evolutionary Biology
+1b3627c2-d64e-4b2e-8330-df593ef5f6a2	Centre For Medical Education
+c4b37587-0141-4820-ab61-27a5234da3e5	Centre For Academic Primary Care
+61aeab60-b713-4259-b777-a27752e1dc73	Catalysis
+828eee3f-c8c1-4e3e-baea-0c37eb4c7130	Department Of German
+cd6ef39c-1460-4f1b-ac32-d4c60f310025	Bristol Doctoral College
+8da58034-6c06-435d-a6ac-fef4ed2d3260	Intelligent Systems Laboratory
+8cbbccf6-6638-43d4-ac2e-3c89a3bb3673	Academic Respiratory Unit
+c0347f3a-1376-405f-aca9-7d3d008a9701	Cabot Institute
+37eed9f6-1be6-4712-a00e-6c1c9b8869e9	Systems Neuroendocrinology Research Group
+facda118-05b4-47ac-9bb1-49be17077fce	Digital Cultures And Methods
+35fbbd8c-3779-4e0a-a8ad-d25626d8d5ca	Centre For Psychological Approaches For Studying Education
+c3ea22d3-3a1f-42da-b904-a6a13e3797b0	Applied Mathematics
+1bcfb6be-8392-4fdd-b1fd-bc2ed4e8e86a	Teaching And Learning For Health Professionals
+0bb03298-6c72-418c-9020-f44a58f90f38	Bristol Dental School
+82931202-dd98-49c6-a5a5-ea2625696a4e	Atmospheric And Global Change Chemistry
+4424df25-11e5-40a2-b233-8bef551b39ad	Biostatistics Epidemiology Mathematics And Ecology
+1c571ea3-56d8-4599-ab9b-f3111b77670a	Arts Faculty Office
+2ffca783-5307-4ae5-8bc7-113bcf9f5940	Probability Analysis And Dynamics
+f44afa62-5a73-45ca-baa4-df8b7b7fca02	Bristol Robotics Laboratory
+c8341ac8-06c6-49f0-8f56-cd82f52efcc2	Ecology And Environmental Change
+175e79fa-4107-4b25-8c5f-d18c216dfb98	School Of Earth Sciences
+98a9fd24-41d2-4600-ad7a-54950226db63	Bristol Medical School
+3ea7f34e-25cd-47f7-808f-2a8206fb51f9	Centre For It  Law
+d8980b07-d34a-4faa-8afe-e70e2cd4bfc3	Centre For Knowledge Culture And Society
+417a0d13-b940-40c7-8f38-6ac7477ed024	Dynamic Cell Biology
+1640a51e-1f37-4729-80d1-ce6facf84108	Computational And Theoretical Chemistry
+c0eb7e60-e19d-45a4-87c3-9917c34bdae9	Fluid And Aerodynamics
+2060b297-aa04-475f-9996-5e9473931400	Farm Animal Science
+8cb4f725-bf86-48a4-94ca-ac3f9356d6fd	Composites University Technology Centre Utc
+ead70271-536b-40f1-b471-3631cc0ec6d4	Bristol Vision Institute
+52cbc743-fd24-4eb2-868d-6530f8cc3817	Bristol Composites Institute Accis
+e3215c94-2091-4f3a-a1eb-fd5e3aa7fec1	Orthopaedic Surgery
+f696064b-b05d-4747-a881-2757670740c7	Brain Tumour Centre
+ca71d946-fcbd-4145-b0d0-348ec694239e	Global Insecurities
+ea636fb7-fc8d-46b2-84f5-f1a42a9b117f	Bristol Medical School Ths
+0c45c511-68fe-4a0c-a1f7-b5c29cff1572	Interface Analysis Centre
+a82c1c43-b67a-41f9-b837-de3824427c39	Water And Environmental Engineering
+193e0101-0b12-4ee9-9ac3-3bb8aee5e3a0	Vision Group
+d410842f-3854-4993-b2ed-3e5f295fc29f	Tobacco And Alcohol
+2f18e285-9bb5-4030-94bc-98c13edde3ab	Institute For Advanced Studies
+8655c949-76d3-45a4-8309-b2510b88fa84	Laboratories For Integrative Neuroscience And Endocrinology
+67208671-9331-457c-ba27-808a49c64d5c	Statistics
+9490faa0-c645-4f86-8512-c801b046eecb	Stem Cells And Neuroregeneration Research Group
+fb60b497-03ef-4c61-81a4-5e01421dda32	Human Rights Implementation Centre
+af4a4d97-2194-4d16-9b78-d7540a9a3d68	Health Protection Research Unit Hpru
+db7e08d7-023c-4648-b73e-0552dbb4484a	European Law
+5095c249-adb3-47c5-9a69-c98861327cbc	Functional Neurosurgery
+09c5e575-d05e-4551-9d84-8bdd0035c280	School Of Biological Sciences
+f54add52-720b-4679-8119-24ec3aaf6f63	Bristol Medical School Phs
+4c971e08-fb4a-4263-a17c-f0c234e29e6a	School Of Sociology Politics And International Studies
+e00e43a0-65a9-47ae-a8a8-e5223ab8c65e	Aninet
+70fc9ea1-4dac-43a9-89b9-e02b02ea2eaf	Reception
+65a9687c-1015-4620-bcbb-60c5904c422d	Department Of Music
+30385056-f911-42d1-9c22-e7035bea1a55	Mathematics Education Research Network Mern
+dedb4ad5-6dac-42f3-8b4d-aead37167017	Global Feminisms
+1a822217-a948-4a20-acc6-f8669050dce1	School Of Civil Aerospace And Mechanical Engineering
+38bd447a-c111-41f3-94a2-e3b3bf1409d2	Microelectronics
+fcbe005e-def6-4b17-abb0-55a3967096a9	Department Of French
+09d3e9b1-3f24-4c2b-990b-f02006505080	Decisionmaking And Rationality
+a8469ab0-8c28-4dd2-a50b-c67445d693fe	School Of Biochemistry
+fff23e87-c85e-44cd-802e-78ed1b4c4231	Epsrc Centre For Doctoral Training In Communications
+c3069607-16f6-4c6b-8e06-2957361d3414	The Hadley Centre For Adoption And Foster Care Studies
+97b3cf16-ddea-4512-a433-0402fc6722b6	Centre For The Study Of Poverty And Social Justice
+d790ec40-16f3-40f4-8506-86870a0c900c	Oral Histories
+d8dfed1c-f848-4bd5-a75b-ca9f02ea2ddd	Bristol Renal
+762a45ee-4068-4265-a096-968baacfe441	Palaeobiology
+cc638e8d-2245-4804-95b3-e2932e53fefc	Atmospheric Chemistry
+9c6cbc06-866b-4667-bd2e-4cc2b980ccc2	Geographies Of Political Economy
+46648873-00f1-43d5-9838-aa825745ae03	Health Sciences Faculty Office
+bd0017ba-94ec-4e26-91c0-16193584a64b	Department Of Classics  Ancient History
+70a7ae3c-db41-4182-9c3d-f3a081f02163	School For Policy Studies
+55245e6b-5338-4095-86a4-9f621cfa479b	Dynamics And Control
+0e12b673-b216-4bb9-b669-83406a32aab9	Photonics
+dc4d7820-7b26-4d2e-a11d-35bcc55d2137	Synthesis
+96e43b52-9426-4eae-b0b1-faf73c753cc4	Centre For Christianity And Culture
+a489cd9c-c637-4ad3-a44b-034f6ea43050	University Of Bristol Law School
+f33c2972-40c8-4d6e-8e16-6cd390dd73f7	Remembr Group
+2e03dd35-6e76-4c87-9d20-30f321d86353	Algebra
+3a945083-b7c0-4b1b-8175-7fe3ae636e0d	Epsrc Centre For Doctoral Training In Advanced Composites For Innovation And Science Accis Cdt
+29eb4582-d872-45ba-9fb2-0efa745375ae	Marine And Terrestrial Environments
+2a93991c-0d6c-41a4-af8a-d11b0f105602	Centre For Structural Econometrics
+58838096-8631-4801-bab7-442477c20124	School Of Psychological Science
+db0bfb07-71e9-4811-8d7b-0bdaa7ee144c	Applied Nonlinear Mathematics
+0e855682-af08-4bdd-aadc-b758cf365b92	Cognitive Processes
+db41b2d7-d35b-48dc-bedf-c50635086519	Colonialism
+45bf9ab2-2437-4c8f-a58e-0afd3e67f261	Tactile Action And Perception
+46944f7d-c83b-4cfd-a702-7751e1cdf43e	Department Of Computer Science
+6fd2bdeb-1450-430a-ac7b-17ef3e29992f	It Services
+dc6ff9f9-4fa5-4491-aa34-7f71faced663	Neuroepigenetics Of Stress And Cognition Research Group
+fd84f738-86e0-4faa-996f-6856d019e86c	Department Of Electrical  Electronic Engineering
+bed5526a-fdc4-4bb4-8247-08aaa3b36672	Veterinary Pathology And Infection And Immunity
+bdab2c16-49ca-4ad3-8d12-c497fd8f3973	Translational Neuroscience Research Group
+5a8c9677-8cba-4c17-ae4f-b0c1bf33d1ef	Centre For Academic Mental Health
+c329ff3e-e359-42d8-8284-519d7ace52c4	Statistical Science
+532bfde3-3a82-4b99-87f1-fcd1f5c944b8	School Of Arts
+def36207-8a37-4667-887c-d52eba3f04e8	Epsrc Centre For Doctoral Training In Chemical Synthesis
+eb0b3d4c-d50f-4f12-a2c3-689827ffcea2	Action Research And Critical Inquiry In Organisations
+8c61386a-acb5-4444-aea2-1fcf2c7553f0	Bristol Veterinary School
+57e3179e-8348-4012-9e80-c7066603626e	Brain Behaviour And Health
+2f061be5-c671-43a0-a4f0-895967dd69e5	Senior Team
+68608dba-04d0-4691-9b4e-432422c7292a	Network For Mind And Brain In Educational And Social Contexts
+a686724b-8ad6-4ca6-a64c-a26921dbdf24	Department Of History Historical Studies
+523319e0-3a96-4e38-865f-25197898b5e7	Fluids And Materials
+b9c95436-d11d-40c6-9328-a2349951686a	Evidence Synthesis Group
+03932840-dc34-49e4-af96-4e05539562fb	School Of Modern Languages
+9128b5ab-357b-48aa-bd85-179b0ea05484	Public Law
+1a1741dc-70b7-4350-8a78-38fd8fb1c204	Department Of Mechanical Engineering
+fee3d4c4-805b-4f76-a161-c8c9056b9b06	Department Of English
+add3fd85-8d8e-4fb1-a78c-10bdaad026d8	Bristol Interaction Group
+f59c7831-84be-474b-a329-471fec394396	Materials For Energy
+621e7875-1395-4139-8d77-4f339e3cae00	Diabetes And Metabolism
+2841fef0-3184-499a-b236-a45f488a8f17	Molecular Neuroendocrinology Research Group
+85c836f6-88dd-4d48-8000-14ba6a2b3419	Visual Information Laboratory
+068b412d-013d-48cc-b500-edd00b822be7	Spais Gender Research Centre
+0ace8364-b5b3-49bf-90fa-2bdf54984685	Bristol Neuroscience
+257d2826-fc54-484d-870a-8ec08bafef3b	Quantum Information Theory
+5bca280a-23c5-43d9-b261-b98fec3320e9	Elizabeth Blackwell
+537be2f5-c7c2-4fd6-a9f5-6f4860fe9df4	Clinical Trials Evaluation Unit
+ab0050bf-baf2-42d3-8be9-ea0879abd832	Quantum Engineering Centre For Doctoral Training Epsrc
+e63e3832-644f-40c5-8d93-2cfafcb1dad4	Social Group
+b76c029d-96b5-41b9-b4c7-7192430ac912	Department Of Film And Television
+0833c1cf-7d1d-484c-be5b-d4aeccf88154	Bristol Childrens Vaccine Centre
+ee338948-51de-4318-b83a-c4cd56417728	Early Modern Studies
+ff3864ad-5d59-48c2-b022-b7d09c218a5e	Epsrc Centre For Doctoral Training In Future Autonomous And Robotic Systems Farscope
+90ecd3b9-000e-4b32-ae8b-7fd63c595b3d	Department Of Civil Engineering
+feceeae1-ceb5-40b6-aa31-eaa4045df624	Geochemistry
+f68e1d22-2c3a-4302-8fb3-32c8d4756968	Spectroscopy And Dynamics
+1aea1496-e270-4f20-b4af-a831e0aa8d54	Language Group
+f2e88e9e-7dae-4cfc-a4dc-3b9a461c9e44	Nutrition And Behaviour
+b0bed1d4-80d6-41a1-ad76-e3d7821b1f39	Human Rights Law
+1c63e088-c661-45d7-bf19-e00a26d4c1fa	Heilbronn Institute For Mathematical Research
+9d2b2143-1841-4bdd-bf0d-26e536027562	Centre For Multilevel Modelling
+625a3d44-712e-4cd0-8674-10ee69a20f10	Bristol Glaciology Centre
+87ab457b-67a8-41db-8251-1d2736fbf64e	School Of Mathematics
+51a4f2a8-97cc-4993-8cbd-0284b10a3eb6	Centre For English Language And Foundation Studies
+b0e8df32-97b9-4835-a341-45590e1f561f	Institute For Greece Rome And The Classical Tradition
+f95947ee-40d3-459e-934a-7490ca5e9bb5	Academic Unit Of Obstetrics And Gynaecology
+fecbacdd-5d34-422d-95d9-33f1e9ed70f8	Screen Research
+89cf1925-2954-490f-b8fa-d792cbe9f7f8	Centre For Researching Education Across Boundaries
+97cf9afb-0e52-4173-8fdc-907f29c873e1	Private Law
+485d7303-d739-4d9f-92fb-71ec70b70d5c	Infection And Immunity Including Veterinary Public Health And Meat Quality
+e40fb803-b997-47d3-ba66-c8b40e90716e	Jean Golding Institute
+7d8ceaf6-d9fa-40f8-ae4a-4288b10899c2	Globalisation Education And Social Futures Network
+e3249dec-1776-4145-86f8-1e5cdda33ccc	High Performance Networks Group Hpn
+33888e3c-41c3-42f8-bd9e-9753fece7c0f	Ergodic Theory And Dynamical Systems
+5c7ac8f6-246d-4455-b3ce-e468b61273c5	Biological And Archaeological Chemistry
+cd1f1c75-595a-4fa0-bfcb-8bf7b3c7a8ec	Langford Clinical Veterinary Service
+775ad2d4-42c0-4260-a666-39c282be4c74	Multiparameter Evidence Synthesis Research
+4004b20b-9c92-4c7e-bfcb-e031e0105190	Department Of Italian
+dc7c43e6-0d86-446d-ae5f-f647ec15b0a1	Health Economics At Bristol
+96738839-6991-4cfa-be8b-5379984a0475	Department Of Hispanic Portuguese And Latin American Studies
+69cacd8e-777b-4dd8-a313-ee0f20a0e6c4	Bristol Centre For Surgical Research
+7d795280-3bf7-43ee-bd26-49e945d87e22	Musculoskeletal Research Unit
+33568d2b-0609-45da-8acd-458242dccc9f	Borders And Borderlands
+1dcc0d2e-d88c-4777-ae8d-f5954ec1e2b4	Volcanology
+1a2ddd6e-6d4c-4cdd-bc74-4e271ace5130	Stroke Research Group
+714e1999-a8fe-4b43-803d-8ec4ea4165de	Law  Religion
+b415908d-184e-4531-b5b9-29fed1cd2217	The Scar Free Foundation Centre For Childrens Burns Research
+ee528f7c-ff9e-48b6-ae6c-0ce898b98ef4	Brigstow Institute
+a23f8f90-9a61-4a02-9a1d-671ef4bd1f03	Commercial Law
+3ed04f4f-792f-4190-967f-43bb6275694a	Quantitative Spatial Science
+6c322c17-893f-44b2-b3b3-c50eebe88d95	Centre For Comparative And International Research In Education
+a4ecfba4-b171-4220-af67-26c73db801a9	Geophysics
+0d7a5d3c-a083-4e4d-a67d-b6ffd3ac4d70	Multiple Sclerosis And Stem Cell Group
+52a53701-a963-452a-9c75-e48843569a6c	Centre For Urban And Public Policy Research
+6eb5eaa6-8233-4776-98e6-9b1871804d87	Bristol Population Health Science Institute
+931de1b2-e000-4d74-af37-948b2b0920b4	Department Of Religion And Theology
+9eae8161-2c74-4161-8b68-1f029268b727	Department Of History Of Art Historical Studies

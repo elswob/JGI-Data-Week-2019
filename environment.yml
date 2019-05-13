@@ -1,0 +1,13 @@
+name: jgi-data-week-workshop
+
+dependencies:
+  - gensim
+  - jupyterlab
+  - python=3.6
+  - numpy
+  - matplotlib
+  - pandas
+  - nltk
+  - biopython
+  - requests
+  - scikit-learn
