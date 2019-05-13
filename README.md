@@ -29,7 +29,7 @@ This workshop will demonstrate the techniques and methods required to do this, i
 
 #### Flow of notebooks
 
-Each will create data in /output directory. Full/complete copies of each are pre-computed in /data directory. 
+Each will create data in /output directory. Full/complete copies of each are pre-computed in /data directory.
 
 #### Prerequisites
 
@@ -38,13 +38,17 @@ Using Anaconda (recommended)
 Clone tutorial repo:
 
 ```
-git clone xxx
+#SSH
+git clone git@github.com:elswob/JGI-Data-Week-2019.git
+
+#HTTPS
+git clone https://github.com/elswob/JGI-Data-Week-2019.git
 ```
 
-Activate jupyterlab environment: 
+Activate jupyterlab environment:
 
 ```
-cd xxx
+cd JGI-Data-Week-2019
 conda env create -f environment.yml
 conda activate jgi-data-week-workshop
 jupyter lab
