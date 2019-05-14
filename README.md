@@ -59,6 +59,10 @@ jupyter lab
 
 you will see a jupyter lab in your browser
 
+#### Alternatively
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/elswob/JGI-Data-Week-2019/master)
+
 
 #### Questions/Issues/Suggestions
 
