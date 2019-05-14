@@ -13,7 +13,7 @@ from random import randint
 #https://stackoverflow.com/questions/47559098/is-there-any-way-to-get-abstracts-for-a-given-list-of-pubmed-ids
 
 def read_existing():
-	print('Read existing downloaded pubmed data')
+	print('Read existing downloaded pubmed data from',config.pubmedFile)
 	pubData = []
 	if os.path.exists(config.pubmedFile):
 		with open(config.pubmedFile, newline='') as csvfile:

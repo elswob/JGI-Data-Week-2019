@@ -8,27 +8,18 @@ from scripts.nltk_functions import *
 def get_ids_from_orcid_public_api(orcid):
 	resp = requests.get("http://pub.orcid.org/"+orcid+"/works/",
 	                    headers={'Accept':'application/orcid+json'})
-
 	results = resp.json()
-	#print(json.dumps(results,indent=4))
-	#PMID_List = []
-	#DOI_List = []
 	pubData = []
 	if 'group' in results:
 		for i, result in enumerate( results['group']):
-			#print(i,result)
 			pubDic={}
 			if 'external-ids' in result:
 				for e in result['external-ids']['external-id']:
 					if e['external-id-type']=='pmid':
 						pmid = e['external-id-value']
-						#print(pmid)
-						#PMID_List.append(pmid)
 						pubDic['pmid']=pmid
 					elif e['external-id-type']=='doi':
 						doi = e['external-id-value']
-						#print(pmid)
-						#DOI_List.append(doi)
 						pubDic['doi']=doi
 			if len(pubDic)>0:
 				pubData.append(pubDic)
@@ -36,7 +27,7 @@ def get_ids_from_orcid_public_api(orcid):
 		print('no data found')
 	return pubData
 
-def orcid_to_pubmed(orcid_ids):
+def orcid_to_pubmedData(orcid_ids):
 	orcidPmidData=[]
 	if os.path.exists(config.orcidFile):
 		with open(config.orcidFile) as f:

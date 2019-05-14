@@ -65,7 +65,7 @@ you will see a jupyter lab in your browser
 - Could we just use doc2vec for comparing people and publication text, e.g. create corpus treating each person as a separate document, then find most similar document (person) for each.
 - Not tested CPU/Mem requirements - might break some machines
 - Major issues with using PubMed, e.g. many DOIs in an ORCID not converting, i.e. not in PubMed. Means many people are underrepresented.
-
+- Could the text matching function be modified to match people covering all terms in the text, i.e. not matching similar people, but set of people that cover all terms.
 
 #### Other info
 

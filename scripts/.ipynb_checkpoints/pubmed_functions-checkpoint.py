@@ -6,20 +6,25 @@ import requests
 import subprocess
 import re
 import os
+import json
+import config
 from random import randint
 
 #https://stackoverflow.com/questions/47559098/is-there-any-way-to-get-abstracts-for-a-given-list-of-pubmed-ids
 
 def read_existing():
-	print('Read existing downloaded pubmed data')
+	print('Read existing downloaded pubmed data from',config.pubmedFile)
 	pubData = []
-	if os.path.exists('data/pubmed.csv'):
-		with open('data/pubmed.csv', newline='') as csvfile:
-			reader = csv.reader(csvfile, delimiter=',')
-			#next(reader, None)
+	if os.path.exists(config.pubmedFile):
+		with open(config.pubmedFile, newline='') as csvfile:
+			reader = csv.reader(csvfile, delimiter='\t')
 			for row in reader:
 				#print(row)
 				pubData.append({'pmid': row[0], 'year': row[1], 'title': row[2], 'abstract': row[3]})
+	else:
+		o=open(config.pubmedFile,'w')
+		o.write('pmid\tyear\ttitle\tabstract\n')
+		o.close()
 	print(len(pubData))
 	return pubData
 
@@ -69,6 +74,21 @@ def pubmed_query_to_pmids(query):
 				pmidList.append(pmid)
 	return pmidList
 
+def doi_to_pmid(doiList):
+	baseurl='https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=my_tool&email=ben.elsworth@bristol.ac.uk&ids='
+	url = baseurl+",".join(doiList)+'&idType=doi&format=json'
+	#print(url)
+	pmidList=set()
+	try:
+		resp = requests.get(url).json()
+		if 'records' in resp:
+			for record in resp['records']:
+				if 'pmid' in record:
+					#print(record['pmid'])
+					pmidList.add(record['pmid'])
+	except:
+		print('requests error')
+	return list(pmidList)
 
 def get_pubmed_data_entrez(pmids):
 	pubData = read_existing()
@@ -86,35 +106,49 @@ def get_pubmed_data_entrez(pmids):
 		Entrez.email = 'ben.elsworth@bristol.ac.uk'
 		handle = Entrez.efetch(db="pubmed", id=','.join(map(str, pmidsToDo)),
 		                       rettype="xml", retmode="text")
-		records = Entrez.read(handle)
+		try:
+			records = Entrez.read(handle)
 
-		with open('data/pubmed.csv', 'a', newline='') as csvfile:
-			fieldnames = ['pmid', 'year', 'title' , 'abstract']
-			writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+			with open(config.pubmedFile, 'a', newline='') as csvfile:
+				fieldnames = ['pmid', 'year', 'title' , 'abstract']
+				writer = csv.DictWriter(csvfile, fieldnames=fieldnames,delimiter='\t')
 
-			for pubmed_article in records['PubmedArticle']:
-				print(pubmed_article)
-				if 'PMID' in pubmed_article['MedlineCitation']:
-					pmid = pubmed_article['MedlineCitation']['PMID']
-				else:
-					continue
-				if 'Article' in pubmed_article['MedlineCitation']:
-					if 'Abstract' in pubmed_article['MedlineCitation']['Article']:
-						abstract = pubmed_article['MedlineCitation']['Article']['Abstract']['AbstractText'][0]
+				for pubmed_article in records['PubmedArticle']:
+					#print(pubmed_article)
+					if 'PMID' in pubmed_article['MedlineCitation']:
+						pmid = pubmed_article['MedlineCitation']['PMID']
 					else:
+						print('No PMID')
 						continue
-					if 'ArticleTitle' in pubmed_article['MedlineCitation']['Article']:
-						title = pubmed_article['MedlineCitation']['Article']['ArticleTitle']
+					if 'Article' in pubmed_article['MedlineCitation']:
+						if 'Abstract' in pubmed_article['MedlineCitation']['Article']:
+							abstract = pubmed_article['MedlineCitation']['Article']['Abstract']['AbstractText'][0]
+						else:
+							print('No Abstract')
+							continue
+						if 'ArticleTitle' in pubmed_article['MedlineCitation']['Article']:
+							title = pubmed_article['MedlineCitation']['Article']['ArticleTitle']
+						else:
+							print('No ArticleTitle')
+							continue
 					else:
+						print('No Article')
 						continue
-				else:
-					continue
-				if 'DateCompleted' in pubmed_article['MedlineCitation']:
-					year = pubmed_article['MedlineCitation']['DateCompleted']['Year'] 
-				else: 
-					continue
-				pubData.append({'pmid':pmid,'year':int(year),'title':title,'abstract':abstract})
-				writer.writerow({'pmid': pmid, 'year': int(year), 'title': title, 'abstract': abstract})
+					if 'DateCompleted' in pubmed_article['MedlineCitation']:
+						year = pubmed_article['MedlineCitation']['DateCompleted']['Year']
+					else:
+						year=0
+						print('No DateCompleted')
+						#continue
+					pubData.append({'pmid':pmid,'year':int(year),'title':title,'abstract':abstract})
+					writer.writerow({'pmid': pmid, 'year': int(year), 'title': title, 'abstract': abstract})
+		except:
+			print('bioentrez error')
+
 	else:
 		print('Nothing to do')
-	return pubData
+	pubFilter=[]
+	for p in pubData:
+		if p['pmid'] in pmids:
+			pubFilter.append(p)
+	return pubFilter
