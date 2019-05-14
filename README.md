@@ -24,7 +24,7 @@ This workshop will demonstrate the techniques and methods required to do this, i
  - How to get data from ORCID
  - How to automate the above
 2. Identity enriched terms
- - TF-IDF from scracth
+ - TF-IDF from scratch
  - TF-IDF using sklearn
 3. Putting it all together
  - Creating a recommender
