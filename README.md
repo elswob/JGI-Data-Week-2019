@@ -17,15 +17,18 @@ This workshop will demonstrate the techniques and methods required to do this, i
 
 ## Details
 
-#### Steps
+#### Steps/Notebooks
 
-1. Create lists of people and publications
-2. Get publication data
-3. Process publicaton data using NLP
-4. Identify enriched concepts for each person/group
-5. Create network of groups, people and concepts
-6. Build recommendation engine
-7. Match a piece of text to people
+1. People and publications
+ - How to get data from PubMed
+ - How to get data from ORCID
+ - How to automate the above
+2. Identity enriched terms
+ - TF-IDF from scracth
+ - TF-IDF using sklearn
+3. Putting it all together
+ - Creating a recommender
+ - Matching a piece of text to people
 
 #### Flow of notebooks
 
