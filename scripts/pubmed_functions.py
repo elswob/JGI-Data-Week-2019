@@ -25,7 +25,7 @@ def read_existing():
 		o=open(config.pubmedFile,'w')
 		o.write('pmid\tyear\ttitle\tabstract\n')
 		o.close()
-	print(len(pubData))
+	print((len(pubData)-1),'publication(s) already downloaded')
 	return pubData
 
 def pubmed_query_to_pmids(query):

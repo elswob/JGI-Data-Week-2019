@@ -1,5 +1,3 @@
-from __future__ import division
-
 import re
 import json
 import nltk
@@ -11,7 +9,6 @@ from nltk.collocations import *
 #import matplotlib
 #matplotlib.style.use('ggplot')
 from nltk.corpus import wordnet as wordnet
-from textstat.textstat import textstat
 from nltk.stem.snowball import SnowballStemmer
 stemmer = SnowballStemmer("english")
 from nltk.stem import WordNetLemmatizer
@@ -19,21 +16,6 @@ wordnet_lemmatizer = WordNetLemmatizer()
 
 bigram_measures = nltk.collocations.BigramAssocMeasures()
 trigram_measures = nltk.collocations.TrigramAssocMeasures()
-
-#stanford NER
-#from nltk.tag.stanford import StanfordNERTagger
-#jar = './data/stanford-ner-2018-10-16/stanford-ner.jar'
-#model = './data/stanford-ner-2018-10-16/classifiers/english.all.3class.distsim.crf.ser.gz'
-#ner_tagger = StanfordNERTagger(model, jar, encoding='utf8')
-
-#from nltk.tag.stanford import CoreNLPPOSTagger, CoreNLPNERTagger
-#from nltk.parse.corenlp import CoreNLPParser
-#stpos, stner = CoreNLPPOSTagger(), CoreNLPNERTagger()
-
-#analyse output
-# awk -F '\t' '$2>50' output/nltk_counts.txt | sort -t$'\t' -k4 -nr | less
-
-#http://www.nltk.org/book/ch01.html
 
 def content_fraction(text):
 	stopwords = nltk.corpus.stopwords.words('english')
@@ -207,19 +189,3 @@ def get_trigrams(text):
 	#else:
 	#	sorted_trigrams = ()
 	#return all_trigrams
-
-def run_textstat(text):
-	#text = """Playing games has always been thought to be important to the development of well-balanced and creative children; however, what part, if any, they should play in the lives of adults has never been researched that deeply. I believe that playing games is every bit as important for adults as for children. Not only is taking time out to play games with our children and other adults valuable to building interpersonal relationships but is also a wonderful way to release built up tension."""
-
-	ts_flesch_reading_ease = textstat.flesch_reading_ease(text)
-	ts_smog_index = textstat.smog_index(text)
-	ts_flesch_kincaid_grade = textstat.flesch_kincaid_grade(text)
-	ts_coleman_liau_index = textstat.coleman_liau_index(text)
-	ts_automated_readability_index = textstat.automated_readability_index(text)
-	ts_dale_chall_readability_score = textstat.dale_chall_readability_score(text)
-	ts_difficult_words = textstat.difficult_words(text)
-	ts_linsear_write_formula = textstat.linsear_write_formula(text)
-	ts_gunning_fog = textstat.gunning_fog(text)
-	ts_text_standard = textstat.text_standard(text)
-
-	return(ts_flesch_reading_ease,ts_smog_index,ts_flesch_kincaid_grade,ts_coleman_liau_index,ts_automated_readability_index,ts_dale_chall_readability_score,ts_difficult_words,ts_linsear_write_formula,ts_gunning_fog,ts_text_standard)
