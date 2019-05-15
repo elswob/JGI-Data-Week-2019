@@ -61,7 +61,9 @@ you will see a jupyter lab in your browser
 
 #### Alternatively
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/elswob/JGI-Data-Week-2019/master)
+Microsoft Azure - https://notebooks.azure.com/ben-elsworth/projects/jgi-data-week-2019
+
+Binder - [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/elswob/JGI-Data-Week-2019/master)
 
 
 #### Questions/Issues/Suggestions
