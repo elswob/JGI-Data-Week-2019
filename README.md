@@ -61,7 +61,8 @@ you will see a jupyter lab in your browser
 
 #### Alternatively
 
-Microsoft Azure - https://notebooks.azure.com/ben-elsworth/projects/jgi-data-week-2019
+Microsoft Azure
+- https://notebooks.azure.com/ben-elsworth/projects/jgi-data-week-2019
 - Requires microsoft account (University of Bristol members can use standard account)
 - Can use the terminal to make changes
 - `cd library`
@@ -73,7 +74,7 @@ Binder
 - [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/elswob/JGI-Data-Week-2019/master)
 
 
-#### Questions/Issues/Suggestions
+## Questions/Issues/Suggestions
 
 - Limiting to ORCID is not ideal, but does bring an interesting bias to potential collaborations
 - How to decide cutoff for TF-IDF?
@@ -84,8 +85,15 @@ Binder
 - Could the text matching function be modified to match people covering all terms in the text, i.e. not matching similar people, but set of people that cover all terms.
 - Tokenizing, lemmatizing, etc.
 
-#### Other info
+## Other info
 
 Elsevier fingerprints white paper - https://www.elsevier.com/solutions/elsevier-fingerprint-engine/elsevier-fingerprint-engine-white-paper
 
 TF-IDF explained - https://www.quora.com/How-does-TfidfVectorizer-work-in-laymans-terms
+
+## Issues
+
+Have had problems with biopython. On azure this you might be able to fix this by using the terminal
+```
+pip install --user biopython
+```
