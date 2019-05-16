@@ -62,8 +62,15 @@ you will see a jupyter lab in your browser
 #### Alternatively
 
 Microsoft Azure - https://notebooks.azure.com/ben-elsworth/projects/jgi-data-week-2019
+- Requires microsoft account (University of Bristol members can use standard account)
+- Can use the terminal to make changes
+- `cd library`
+- `git pull origin master`
 
-Binder - [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/elswob/JGI-Data-Week-2019/master)
+
+Binder
+- Public to all, not that stable though
+- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/elswob/JGI-Data-Week-2019/master)
 
 
 #### Questions/Issues/Suggestions
