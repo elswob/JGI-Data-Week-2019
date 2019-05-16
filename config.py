@@ -12,6 +12,3 @@ demoPurePeopleFile='data/pure_people.txt'
 demoPureOrcidFile='data/pure_person_to_orcid.txt'
 demoOrcidToOrcid='output/orcid-to-orcid-tf-idf.tsv'
 
-
-demo1='data/demo.tsv'
-demo2='data/pure_person_to_orcid.txt'

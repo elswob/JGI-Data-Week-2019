@@ -67,6 +67,7 @@ Microsoft Azure
 - Can use the terminal to make changes
 - `cd library`
 - `git pull origin master`
+- https://medium.com/@mikeclymer/integrating-azure-notebooks-jupyter-notebooks-with-github-fd847e941e4
 
 
 Binder

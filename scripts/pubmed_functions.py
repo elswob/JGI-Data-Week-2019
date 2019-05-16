@@ -19,7 +19,6 @@ def read_existing():
 		with open(config.pubmedFile, newline='') as csvfile:
 			reader = csv.reader(csvfile, delimiter='\t')
 			for row in reader:
-				#print(row)
 				pubData.append({'pmid': row[0], 'year': row[1], 'title': row[2], 'abstract': row[3]})
 	else:
 		o=open(config.pubmedFile,'w')
@@ -28,23 +27,23 @@ def read_existing():
 	print((len(pubData)-1),'publication(s) already downloaded')
 	return pubData
 
+#function to convert DOIs to PubMed IDs
 def doi_to_pmid(doiList):
 	baseurl='https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=my_tool&email=ben.elsworth@bristol.ac.uk&ids='
 	url = baseurl+",".join(doiList)+'&idType=doi&format=json'
-	#print(url)
 	pmidList=set()
 	try:
 		resp = requests.get(url).json()
 		if 'records' in resp:
 			for record in resp['records']:
 				if 'pmid' in record:
-					#print(record['pmid'])
 					pmidList.add(record['pmid'])
 	except:
 		print('requests error')
 	return list(pmidList)
 
 def get_pubmed_data_entrez(pmids):
+	#check for existing pubmed data
 	pubData = read_existing()
 
 	#check if already done
@@ -61,14 +60,14 @@ def get_pubmed_data_entrez(pmids):
 		handle = Entrez.efetch(db="pubmed", id=','.join(map(str, pmidsToDo)),
 		                       rettype="xml", retmode="text")
 		try:
+			#query entrez
 			records = Entrez.read(handle)
-
+			#open file for output
 			with open(config.pubmedFile, 'a', newline='') as csvfile:
 				fieldnames = ['pmid', 'year', 'title' , 'abstract']
 				writer = csv.DictWriter(csvfile, fieldnames=fieldnames,delimiter='\t')
-
+				#loop through each article
 				for pubmed_article in records['PubmedArticle']:
-					#print(pubmed_article)
 					if 'PMID' in pubmed_article['MedlineCitation']:
 						pmid = pubmed_article['MedlineCitation']['PMID']
 					else:
@@ -91,9 +90,9 @@ def get_pubmed_data_entrez(pmids):
 					if 'DateCompleted' in pubmed_article['MedlineCitation']:
 						year = pubmed_article['MedlineCitation']['DateCompleted']['Year']
 					else:
+						#DataCompleted is missing for some
 						year=0
 						print('No DateCompleted')
-						#continue
 					pubData.append({'pmid':pmid,'year':int(year),'title':title,'abstract':abstract})
 					writer.writerow({'pmid': pmid, 'year': int(year), 'title': title, 'abstract': abstract})
 		except:
