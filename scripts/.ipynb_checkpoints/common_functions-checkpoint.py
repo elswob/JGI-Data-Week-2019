@@ -3,7 +3,6 @@ import json
 import config
 
 from scripts.pubmed_functions import *
-from scripts.nltk_functions import *
 
 def get_ids_from_orcid_public_api(orcid):
 	resp = requests.get("http://pub.orcid.org/"+orcid+"/works/",
@@ -68,7 +67,7 @@ def orcid_to_pubmedData(orcid_ids):
 def load_orcid():
     print('load_orcid')
     orcidToPubmedID={}
-    with open(config.orcidFile) as f:
+    with open(config.demoOrcidFile) as f:
         next(f)
         for line in f:
             orcid,pmid = line.rstrip().split('\t')
@@ -82,7 +81,7 @@ def load_orcid():
 def load_pubmed():
     print('load_pubmed')
     pubmedText={}
-    with open(config.pubmedFile, newline='') as csvfile:
+    with open(config.demoPubmedFile, newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         next(reader, None)
         for row in reader:
