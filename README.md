@@ -15,7 +15,7 @@ One specific example of this can be found in academic publications. By using uni
 
 This workshop will demonstrate the techniques and methods required to do this, including the use of APIs, extracting and enriching informative text, natural language processing and constructing recommendation engines.  We will show how this kind of approach can be used to recommend collaborations, automatically identify people matching a specific piece of text and identify topic areas with high and low coverage.
 
-## Details
+## Content
 
 #### Steps/Notebooks
 
@@ -33,6 +33,8 @@ This workshop will demonstrate the techniques and methods required to do this, i
 #### Flow of notebooks
 
 Each will create data in /output directory. Full/complete copies of each are pre-computed in /data directory.
+
+## Setup
 
 #### Prerequisites
 
