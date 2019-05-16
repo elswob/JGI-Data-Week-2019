@@ -103,6 +103,5 @@ def orcid_to_pubmed():
         for p in orcidToPubmedID[orcid]:
             if p in pubmedText:
                 oText+=(pubmedText[p])
-        print(len(oText))
         orcidToPubmed[orcid]=oText
     return orcidToPubmed
