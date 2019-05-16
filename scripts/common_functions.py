@@ -64,50 +64,6 @@ def orcid_to_pubmedData(orcid_ids):
 
 	return pubData
 
-def get_ngrams(text):
-        #print('\nCounting unigrams')
-        unigrams=get_unigrams(text)
-        #print(len(unigrams))
-        #print(unigrams[:10])
-
-        #print('\nCounting bigrams')
-        bigrams = get_bigrams(text)
-        #print(len(bigrams))
-        #print(bigrams[:10])
-
-        #print('\nCounting trigrams')
-        trigrams = get_trigrams(text)
-        #print(len(trigrams))
-        #print(trigrams[:10])
-
-        return unigrams,bigrams,trigrams
-
-def pubmed_to_ngram():
-	unigramFile=open(config.unigramFile,'w')
-	unigramFile.write('pmid\tt1\tcount\n')
-	bigramFile=open(config.bigramFile,'w')
-	bigramFile.write('pmid\tt1\tt2\t\tcount\n')
-	trigramFile=open(config.trigramFile,'w')
-	trigramFile.write('pmid\tt1\tt2\tt3\tcount\n')
-	with open(config.pubmedFile, newline='') as csvfile:
-		reader = csv.reader(csvfile, delimiter='\t')
-		next(reader, None)
-		for row in reader:
-			#print(row)
-			pmid=row[0]
-			text=row[2]+' '+row[3]
-			unigrams,bigrams,trigrams=get_ngrams(text)
-			for i in unigrams:
-				unigramFile.write(pmid+'\t'+i['t1']+'\t'+str(i['count'])+'\n')
-			for i in bigrams:
-				bigramFile.write(pmid+'\t'+i['t1']+'\t'+i['t2']+'\t'+str(i['count'])+'\n')
-			for i in trigrams:
-				trigramFile.write(pmid+'\t'+i['t1']+'\t'+i['t2']+'\t'+i['t3']+'\t'+str(i['count'])+'\n')
-			#print(unigrams[0:10])
-	unigramFile.close()
-	bigramFile.close()
-	trigramFile.close()
-
 #load orcid to pmid data
 def load_orcid():
     print('load_orcid')
