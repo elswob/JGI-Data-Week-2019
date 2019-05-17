@@ -11,3 +11,4 @@ dependencies:
   - biopython
   - requests
   - scikit-learn
+  - xmltodict

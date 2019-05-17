@@ -105,3 +105,42 @@ def get_pubmed_data_entrez(pmids):
 		if p['pmid'] in pmids:
 			pubFilter.append(p)
 	return pubFilter
+
+def get_pubmed_data_efetch(pmids):
+	url='https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi'
+	#url = url+'?db=pubmed&id='+",".join(pmids)+'&retmode=xml'
+	print(url)
+	params = {'db': 'pubmed', 'id':",".join(pmids), 'retmode':'xml'}
+	print(params)
+	r = requests.get(url, params=params)
+	records = xmltodict.parse(r.text)
+	pubData = []
+	for pubmed_article in records['PubmedArticleSet']['PubmedArticle']:
+		#print(pubmed_article)
+		if 'PMID' in pubmed_article['MedlineCitation']:
+			pmid = pubmed_article['MedlineCitation']['PMID']['#text']
+		else:
+			print('No PMID')
+			continue
+		if 'Article' in pubmed_article['MedlineCitation']:
+			if 'Abstract' in pubmed_article['MedlineCitation']['Article']:
+				abstract = pubmed_article['MedlineCitation']['Article']['Abstract']['AbstractText']
+			else:
+				print('No Abstract')
+				continue
+			if 'ArticleTitle' in pubmed_article['MedlineCitation']['Article']:
+				title = pubmed_article['MedlineCitation']['Article']['ArticleTitle']
+			else:
+				print('No ArticleTitle')
+				continue
+		else:
+			print('No Article')
+			continue
+		if 'DateCompleted' in pubmed_article['MedlineCitation']:
+			year = pubmed_article['MedlineCitation']['DateCompleted']['Year']
+		else:
+			#DataCompleted is missing for some
+			year=0
+			print('No DateCompleted')
+		pubData.append({'pmid':pmid,'year':int(year),'title':title,'abstract':abstract})
+		#writer.writerow({'pmid': pmid, 'year': int(year), 'title': title, 'abstract': abstract})
