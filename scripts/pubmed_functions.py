@@ -1,3 +1,4 @@
+from Bio import Entrez
 import xmltodict
 import gzip
 import csv
@@ -42,7 +43,7 @@ def doi_to_pmid(doiList):
 		print('requests error')
 	return list(pmidList)
 
-def get_pubmed_data_entrez(pmids):
+def get_pubmed_data_efetch_bio(pmids):
 	#check for existing pubmed data
 	pubData = read_existing()
 
@@ -112,21 +113,23 @@ def pubmed_xml_parser(pubmed_article):
 			pmid = pubmed_article['MedlineCitation']['PMID']['#text']
 		else:
 			print('No PMID')
-			#continue
+			return
 		if 'Article' in pubmed_article['MedlineCitation']:
 			if 'Abstract' in pubmed_article['MedlineCitation']['Article']:
 				abstract = pubmed_article['MedlineCitation']['Article']['Abstract']['AbstractText']
 			else:
 				print('No Abstract')
-				#continue
+				abstract=''
+				#return
 			if 'ArticleTitle' in pubmed_article['MedlineCitation']['Article']:
 				title = pubmed_article['MedlineCitation']['Article']['ArticleTitle']
 			else:
 				print('No ArticleTitle')
-				#continue
+				title=''
+				#return
 		else:
 			print('No Article')
-			#continue
+			return
 		if 'DateCompleted' in pubmed_article['MedlineCitation']:
 			year = pubmed_article['MedlineCitation']['DateCompleted']['Year']
 		else:
@@ -144,7 +147,6 @@ def get_pubmed_data_efetch(pmids):
 	#check if already done
 	pmidsToDo = []
 	for p in pmids:
-		print(p)
 		if any(d['pmid'] == p for d in pubData):
 			print(p,'is done')
 		else:
