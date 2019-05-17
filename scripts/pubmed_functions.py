@@ -1,4 +1,4 @@
-from Bio import Entrez
+import xmltodict
 import gzip
 import csv
 import time
@@ -106,41 +106,84 @@ def get_pubmed_data_entrez(pmids):
 			pubFilter.append(p)
 	return pubFilter
 
+def pubmed_xml_parser(pubmed_article):
+	print(pubmed_article)
+	if 'PMID' in pubmed_article['MedlineCitation']:
+		pmid = pubmed_article['MedlineCitation']['PMID']['#text']
+	else:
+		print('No PMID')
+		#continue
+	if 'Article' in pubmed_article['MedlineCitation']:
+		if 'Abstract' in pubmed_article['MedlineCitation']['Article']:
+			abstract = pubmed_article['MedlineCitation']['Article']['Abstract']['AbstractText']
+		else:
+			print('No Abstract')
+			#continue
+		if 'ArticleTitle' in pubmed_article['MedlineCitation']['Article']:
+			title = pubmed_article['MedlineCitation']['Article']['ArticleTitle']
+		else:
+			print('No ArticleTitle')
+			#continue
+	else:
+		print('No Article')
+		#continue
+	if 'DateCompleted' in pubmed_article['MedlineCitation']:
+		year = pubmed_article['MedlineCitation']['DateCompleted']['Year']
+	else:
+		#DataCompleted is missing for some
+		year=0
+		print('No DateCompleted')
+	return pmid,title,abstract,year
+
 def get_pubmed_data_efetch(pmids):
-	url='https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi'
-	#url = url+'?db=pubmed&id='+",".join(pmids)+'&retmode=xml'
-	print(url)
-	params = {'db': 'pubmed', 'id':",".join(pmids), 'retmode':'xml'}
-	print(params)
-	r = requests.get(url, params=params)
-	records = xmltodict.parse(r.text)
-	pubData = []
-	for pubmed_article in records['PubmedArticleSet']['PubmedArticle']:
-		#print(pubmed_article)
-		if 'PMID' in pubmed_article['MedlineCitation']:
-			pmid = pubmed_article['MedlineCitation']['PMID']['#text']
+	print(pmids)
+	pubData = read_existing()
+
+	#check if already done
+	pmidsToDo = []
+	for p in pmids:
+		print(p)
+		if any(d['pmid'] == p for d in pubData):
+			print(p,'is done')
 		else:
-			print('No PMID')
-			continue
-		if 'Article' in pubmed_article['MedlineCitation']:
-			if 'Abstract' in pubmed_article['MedlineCitation']['Article']:
-				abstract = pubmed_article['MedlineCitation']['Article']['Abstract']['AbstractText']
-			else:
-				print('No Abstract')
-				continue
-			if 'ArticleTitle' in pubmed_article['MedlineCitation']['Article']:
-				title = pubmed_article['MedlineCitation']['Article']['ArticleTitle']
-			else:
-				print('No ArticleTitle')
-				continue
-		else:
-			print('No Article')
-			continue
-		if 'DateCompleted' in pubmed_article['MedlineCitation']:
-			year = pubmed_article['MedlineCitation']['DateCompleted']['Year']
-		else:
-			#DataCompleted is missing for some
-			year=0
-			print('No DateCompleted')
-		pubData.append({'pmid':pmid,'year':int(year),'title':title,'abstract':abstract})
-		#writer.writerow({'pmid': pmid, 'year': int(year), 'title': title, 'abstract': abstract})
+			pmidsToDo.append(p)
+
+	if len(pmidsToDo)>0:
+		print('Processing',pmidsToDo)
+		url='https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi'
+		#url = url+'?db=pubmed&id='+",".join(pmids)+'&retmode=xml'
+		#print(url)
+		#pmids.append(' ')
+		params = {'db': 'pubmed', 'id':",".join(pmids), 'retmode':'xml'}
+		print(params)
+		r = requests.get(url, params=params)
+		try:
+			r = requests.get(url, params=params)
+			records = xmltodict.parse(r.text)
+			print('Number of records = ',len(records))
+			with open(config.pubmedFile, 'a', newline='') as csvfile:
+				fieldnames = ['pmid', 'year', 'title' , 'abstract']
+				writer = csv.DictWriter(csvfile, fieldnames=fieldnames,delimiter='\t')
+				pubData = []
+				if len(records['PubmedArticleSet']['PubmedArticle'])==1:
+					#print(records)
+					pubmed_article=records['PubmedArticleSet']['PubmedArticle']
+					#print(pubmed_article)
+					pmid,title,abstract,year=pubmed_xml_parser(pubmed_article)
+					pubData.append({'pmid':pmid,'year':int(year),'title':title,'abstract':abstract})
+					writer.writerow({'pmid': pmid, 'year': int(year), 'title': title, 'abstract': abstract})
+				else:
+					for pubmed_article in records['PubmedArticleSet']['PubmedArticle']:
+						pmid,title,abstract,year=pubmed_xml_parser(pubmed_article)
+						pubData.append({'pmid':pmid,'year':int(year),'title':title,'abstract':abstract})
+						writer.writerow({'pmid': pmid, 'year': int(year), 'title': title, 'abstract': abstract})
+		except:
+				print('esearch error')
+
+	else:
+		print('Nothing to do')
+	pubFilter=[]
+	for p in pubData:
+		if p['pmid'] in pmids:
+			pubFilter.append(p)
+	return pubFilter

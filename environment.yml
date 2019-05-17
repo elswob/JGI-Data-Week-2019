@@ -8,7 +8,6 @@ dependencies:
   - matplotlib
   - pandas
   - nltk
-  - biopython
   - requests
   - scikit-learn
   - xmltodict

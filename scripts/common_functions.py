@@ -26,7 +26,7 @@ def get_ids_from_orcid_public_api(orcid):
 		print('no data found')
 	return pubData
 
-#wrapper function to get PubMed data from list of ORCID IDs 
+#wrapper function to get PubMed data from list of ORCID IDs
 def orcid_to_pubmedData(orcid_ids):
 	orcidPmidData=[]
 	#check for existing data first
@@ -60,7 +60,7 @@ def orcid_to_pubmedData(orcid_ids):
 			#convert DOIs to PubMedIDs
 			doi_pmid=doi_to_pmid(list(doiIDs))
 			allPMIDs = list(set(list(pubMedIDs)+list(doi_pmid)))
-			pubData=get_pubmed_data_entrez(allPMIDs)
+			pubData=get_pubmed_data_efetch(allPMIDs)
 			for p in allPMIDs:
 				orcidFile.write(o+'\t'+p+'\n')
 	orcidFile.close()
