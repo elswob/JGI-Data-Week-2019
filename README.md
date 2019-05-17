@@ -63,12 +63,20 @@ you will see a jupyter lab in your browser
 
 #### Alternatively
 
-Microsoft Azure
-- https://notebooks.azure.com/ben-elsworth/projects/jgi-data-week-2019
-- Requires microsoft account (University of Bristol members can use standard account)
-- Can use the terminal to make changes
+Microsoft Azure:
+
+- Go to https://notebooks.azure.com/ben-elsworth/projects/jgi-data-week-2019
+- Clone project
+- Open notebooks (Stepxxx.ipynb)
+
+Requires microsoft account (University of Bristol members can use standard account)
+
+To update repository:
+- Open terminal
 - `cd library`
 - `git pull origin master`
+
+Other info:
 - https://medium.com/@mikeclymer/integrating-azure-notebooks-jupyter-notebooks-with-github-fd847e941e4
 
 
