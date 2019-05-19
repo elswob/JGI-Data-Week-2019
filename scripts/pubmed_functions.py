@@ -1,4 +1,3 @@
-from Bio import Entrez
 import xmltodict
 import gzip
 import csv
