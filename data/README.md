@@ -48,4 +48,4 @@ PubMed data
   - pmid (PubMed ID)
   - year (Year of publication)
   - title (Title)
-  - (abstract) (Abstract)
+  - abstract (Abstract)
